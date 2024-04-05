@@ -1,9 +1,9 @@
-import "./App.css";
+// import "./App.css";
 import Contacts from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex justify-center items-center min-h-screen">
       <Contacts />
     </div>
   );

@@ -16,10 +16,11 @@ function Form({ addContact, contacts }) {
     addContact([...contacts, form]);
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form className="" onSubmit={onSubmit}>
       <div>
         <input
           name="fullname"
+          className="w-full p-1 m-1 box-border box"
           placeholder="Fullname"
           value={form.fullname}
           onChange={onChangeInput}
@@ -28,13 +29,16 @@ function Form({ addContact, contacts }) {
       <div>
         <input
           name="phone_number"
+          className="w-full p-1 m-1 box-border box"
           placeholder="Phone Number"
           value={form.phone_number}
           onChange={onChangeInput}
         />
       </div>
-      <div className="btn">
-        <button>Add</button>
+      <div className="btn flex justify-end p-3">
+        <button className="px-10 py-1 border-2 bg-slate-300 hover:bg-slate-400 hover:text-slate-100 transition-all text-slate-800 rounded-xl">
+          Add
+        </button>
       </div>
     </form>
   );
