@@ -13,7 +13,8 @@ li {
 
 #container {
   width: 400px;
-  background-color: aliceblue;
+  background-image: url(/src/components/Contact/Images/light-blue.svg);
+  background-position: center;
   padding: 20px;
   border-radius: 22px;
 }
@@ -30,7 +31,7 @@ input {
   padding: 0 25px 0 25px;
 }
 .list > li {
-  background-color: antiquewhite;
+  background-color: #e6e9ee;
   padding: 5px;
   margin-bottom: 2px;
   display: flex;

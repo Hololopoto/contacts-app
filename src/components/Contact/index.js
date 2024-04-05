@@ -3,6 +3,13 @@ import List from "./List/list";
 import Form from "./Form/form";
 
 function Contacts() {
+  const deleteContact = (index) => {
+    const updatedContacts = [...contacts];
+    updatedContacts.splice(index, 1);
+    setContacts(updatedContacts);
+  };
+
+  // Usage: <List contacts={contacts} deleteContact={deleteContact} />
   const [contacts, setContacts] = useState([
     // {
     //   fullname: "Betül",
@@ -23,7 +30,7 @@ function Contacts() {
   return (
     <div id="container">
       <h2>My Contacts</h2>
-      <List contacts={contacts} />
+      <List contacts={contacts} deleteContact={deleteContact} />
       <Form addContact={setContacts} contacts={contacts} />
     </div>
   );

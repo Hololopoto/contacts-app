@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function List({ contacts }) {
+function List({ contacts, deleteContact }) {
   const [filterText, setFilterText] = useState("");
   const filtered = contacts.filter((item) => {
     return Object.keys(item).some((key) =>
@@ -21,7 +21,7 @@ function List({ contacts }) {
 
       <ul className="list">
         {filtered.map((contact, i) => (
-          <li key={i}>
+          <li onClick={deleteContact} key={i}>
             <span className="name">{contact.fullname}</span>
             <span className="phone">{contact.phone_number}</span>
           </li>
