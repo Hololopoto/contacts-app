@@ -1,20 +1,27 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 const initialFormValues = { fullname: "", phone_number: "" };
+
 function Form({ addContact, contacts }) {
   const [form, setForm] = useState(initialFormValues);
   useEffect(() => {
     setForm(initialFormValues);
   }, [contacts]);
+
   const onChangeInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (form.fullname === "" || form.phone_number === "") {
       return false;
     }
-    addContact([...contacts, form]);
+
+    addContact([...contacts, { id: uuidv4(), ...form }]);
   };
+
   return (
     <form className="" onSubmit={onSubmit}>
       <div>

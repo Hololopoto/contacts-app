@@ -5,18 +5,9 @@ import Form from "./Form/form";
 function Contacts() {
   // Usage: <List contacts={contacts} deleteContact={deleteContact} />
   const [contacts, setContacts] = useState([
-    {
-      fullname: "Betül",
-      phone_number: 3333333333,
-    },
-    {
-      fullname: "Alper",
-      phone_number: 123123123,
-    },
-    {
-      fullname: "Fatma",
-      phone_number: 444444444,
-    },
+    // { id: 1, fullname: "Betül", phone_number: 3333333333 },
+    // { id: 2, fullname: "Alper", phone_number: 123123123 },
+    // { id: 3, fullname: "Fatma", phone_number: 444444444 },
   ]);
   useEffect(() => {
     console.log(contacts);
