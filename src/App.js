@@ -1,4 +1,3 @@
-// import "./App.css";
 import Contacts from "./components/Contact";
 
 function App() {

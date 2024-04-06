@@ -10,18 +10,14 @@ function List({ contacts, addContact }) {
         .includes(filterText.toLocaleLowerCase())
     );
   });
-  console.log(filtered);
+  // console.log(filtered);
 
-  // const deleteContact = (id) => {
-  //   const updatedContacts = [...filtered];
-  //   const itemIndex = updatedContacts.findIndex((contact) => contact.id === id);
-  // };
   const deleteContact = (id) => {
     const updatedContacts = [...contacts];
     const itemIndex = updatedContacts.findIndex((contact) => contact.id === id);
     if (itemIndex !== -1) {
       updatedContacts.splice(itemIndex, 1);
-      console.log(itemIndex);
+      // console.log(itemIndex);
       addContact(updatedContacts);
     }
   };
