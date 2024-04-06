@@ -3,12 +3,7 @@ import List from "./List/list";
 import Form from "./Form/form";
 
 function Contacts() {
-  // Usage: <List contacts={contacts} deleteContact={deleteContact} />
-  const [contacts, setContacts] = useState([
-    // { id: 1, fullname: "Betül", phone_number: 3333333333 },
-    // { id: 2, fullname: "Alper", phone_number: 123123123 },
-    // { id: 3, fullname: "Fatma", phone_number: 444444444 },
-  ]);
+  const [contacts, setContacts] = useState([]);
   useEffect(() => {
     console.log(contacts);
   }, [contacts]);
