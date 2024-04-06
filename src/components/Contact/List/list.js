@@ -31,13 +31,13 @@ function List({ contacts, addContact }) {
         onChange={(e) => setFilterText(e.target.value)}
       />
 
-      <div className="list my-4 px-6 ">
+      <div className="list my-5 px-2 ">
         {filtered.map((contact, i) => (
           <div
             key={i}
             className=" bg-slate-200 p-1 mb-1 flex rounded-xl items-center  justify-between">
-            <span className="name">{contact.fullname}</span>
-            <span className="phone">{contact.phone_number}</span>
+            <span className="name ml-4 w-1/2">{contact.fullname}</span>
+            <span className="phone pr-5 w-1/2">{contact.phone_number}</span>
             <button
               onClick={() => deleteContact(contact.id)}
               className="px-3 rounded-full hover:bg-slate-300 bg-slate-400">
