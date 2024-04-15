@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function List({ contacts, addContact }) {
   const [filterText, setFilterText] = useState("");
@@ -22,6 +22,9 @@ function List({ contacts, addContact }) {
     }
   };
 
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
   return (
     <div>
       <input
