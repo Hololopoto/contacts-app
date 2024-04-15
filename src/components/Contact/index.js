@@ -5,7 +5,10 @@ import Form from "./Form/form";
 function Contacts() {
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
-    localStorage.setItem("contacts", JSON.stringify(contacts));
+    if (contacts.length > 0) {
+      localStorage.setItem("contacts", JSON.stringify(contacts));
+    }
+
     console.log(contacts);
   }, [contacts]);
   return (

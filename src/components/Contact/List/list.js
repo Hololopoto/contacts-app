@@ -11,20 +11,23 @@ function List({ contacts, addContact }) {
     );
   });
   // console.log(filtered);
-
+  useEffect(() => {
+    const storedContacts = localStorage.getItem("contacts");
+    if (storedContacts) {
+      addContact(JSON.parse(storedContacts));
+    }
+  }, []);
   const deleteContact = (id) => {
     const updatedContacts = [...contacts];
     const itemIndex = updatedContacts.findIndex((contact) => contact.id === id);
     if (itemIndex !== -1) {
       updatedContacts.splice(itemIndex, 1);
-      // console.log(itemIndex);
+      localStorage.setItem("contacts", JSON.stringify(updatedContacts));
       addContact(updatedContacts);
     }
   };
 
-  useEffect(() => {
-    localStorage.setItem("contacts", JSON.stringify(contacts));
-  }, [contacts]);
+  useEffect(() => {}, [contacts]);
   return (
     <div>
       <input
