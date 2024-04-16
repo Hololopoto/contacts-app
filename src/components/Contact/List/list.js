@@ -31,7 +31,7 @@ function List({ contacts, addContact }) {
   return (
     <div>
       <input
-        placeholder="Filter Contact"
+        placeholder="Filter Todo"
         className="w-full p-1 box-border box"
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}

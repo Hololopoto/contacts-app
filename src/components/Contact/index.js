@@ -15,7 +15,7 @@ function Contacts() {
     <div
       id="container"
       className="w-[400px] border-8 shadow-md p-5 rounded-3xl bg-glowy">
-      <h2 className="text-slate-700 m-3 text-2xl">My Contacts</h2>
+      <h2 className="text-slate-700 m-3 text-2xl">Todos</h2>
       <List contacts={contacts} addContact={setContacts} />
       <Form addContact={setContacts} contacts={contacts} />
     </div>

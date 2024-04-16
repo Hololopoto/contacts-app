@@ -28,7 +28,7 @@ function Form({ addContact, contacts }) {
         <input
           name="fullname"
           className="w-full p-1 m-1 box-border box"
-          placeholder="Fullname"
+          placeholder="Todo Title"
           value={form.fullname}
           onChange={onChangeInput}
         />
@@ -37,7 +37,7 @@ function Form({ addContact, contacts }) {
         <input
           name="phone_number"
           className="w-full p-1 m-1 box-border box"
-          placeholder="Phone Number"
+          placeholder="Todo Content"
           value={form.phone_number}
           onChange={onChangeInput}
         />
