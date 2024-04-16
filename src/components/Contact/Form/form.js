@@ -14,30 +14,32 @@ function Form({ addContact, contacts }) {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault();
     if (form.fullname === "" || form.phone_number === "") {
       return false;
     }
 
     addContact([...contacts, { id: uuidv4(), ...form }]);
+    e.preventDefault();
   };
 
   return (
     <form className="" onSubmit={onSubmit}>
       <div>
+        <label htmlFor="Todo Title">Todo Title:</label>
         <input
           name="fullname"
           className="w-full p-1 m-1 box-border box"
-          placeholder="Todo Title"
+          placeholder="Add Todo"
           value={form.fullname}
           onChange={onChangeInput}
         />
       </div>
       <div>
+        <label htmlFor="Todo Content">Todo Content:</label>
         <input
           name="phone_number"
           className="w-full p-1 m-1 box-border box"
-          placeholder="Todo Content"
+          placeholder="Add Todo"
           value={form.phone_number}
           onChange={onChangeInput}
         />
