@@ -1,2 +1,2 @@
 # Contact List App
-Link: https://alper-contact-app.netlify.app/
+Link: https://hololopoto-todo-app.netlify.app/
