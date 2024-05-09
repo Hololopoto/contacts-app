@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const initialFormValues = { fullname: "", phone_number: "" };
@@ -17,21 +17,23 @@ function Form({ addContact, contacts }) {
     if (form.fullname === "" || form.phone_number === "") {
       return false;
     }
-
+    firstInput.current.focus();
     addContact([...contacts, { id: uuidv4(), ...form }]);
     e.preventDefault();
   };
-
+  const firstInput = useRef(null);
   return (
     <form className="" onSubmit={onSubmit}>
       <div>
         <label htmlFor="Todo Title">Todo Title:</label>
         <input
+          ref={firstInput}
           name="fullname"
           className="w-full p-1 m-1 box-border box"
           placeholder="Add Todo"
           value={form.fullname}
           onChange={onChangeInput}
+          autoFocus
         />
       </div>
       <div>
